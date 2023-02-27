@@ -1,0 +1,47 @@
+.course-container {
+  min-height: 100vh;
+  background-color: #efefef;
+}
+
+.course-points {
+  text-align: justify;
+  padding: 10px;
+}
+
+.course-card {
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.action-button {
+  bottom: 0px;
+}
+
+.course-descritpion {
+  text-align: justify;
+  padding-top: 10px;
+}
+
+.course-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hidden-courses{
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 600px) {
+  .card-container {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,27 @@
+.padding{
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 1200px){
+    .padding{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .padding{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .padding{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

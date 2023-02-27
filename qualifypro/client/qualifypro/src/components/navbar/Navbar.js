@@ -9,7 +9,7 @@ const Navbar = () => {
     const showNav = () => {
         setToggle((prev) => !prev)
     }
-    console.log(md)
+    // console.log(md)
     useEffect(() => {
         if (md) {
             document.getElementsByClassName('navbar-links')[0].classList.remove('nav-show');
@@ -35,12 +35,12 @@ const Navbar = () => {
         return (
             <Box className="ham-nav" style={toggle ? mountedStyle : unmountedStyle}>
                 <Box className='ham-navbar-links'>
-                    <a href='home' className='ham-nav-link'>HOME</a>
-                    <a href='aboutus' className='ham-nav-link'>ABOUT US</a>
-                    <a href='courses' className='ham-nav-link'>COURSES</a>
-                    <a href='faq' className='ham-nav-link'>F.A.Q</a>
-                    <a href='contactus' className='ham-nav-link'>CONTACT US</a>
-                    <a href='reviews' className='ham-nav-link'>REVIEWS</a>
+                    <a href='#home' className='ham-nav-link'>HOME</a>
+                    <a href='#aboutus' className='ham-nav-link'>ABOUT US</a>
+                    <a href='#courses' className='ham-nav-link'>COURSES</a>
+                    <a href='#faq' className='ham-nav-link'>F.A.Q</a>
+                    <a href='#contactus' className='ham-nav-link'>CONTACT US</a>
+                    <a href='#reviews' className='ham-nav-link'>REVIEWS</a>
                 </Box>
             </Box>
         )
@@ -52,12 +52,12 @@ const Navbar = () => {
                 <a className='logo' href='home'>QualifyPro</a>
             </Box>
             <Box className='navbar-links'>
-                <a href='home' className='nav-link'>HOME</a>
-                <a href='aboutus' className='nav-link'>ABOUT US</a>
-                <a href='courses' className='nav-link'>COURSES</a>
-                <a href='faq' className='nav-link'>F.A.Q</a>
-                <a href='contactus' className='nav-link'>CONTACT US</a>
-                <a href='reviews' className='nav-link'>REVIEWS</a>
+                <a href='#home' className='nav-link'>HOME</a>
+                <a href='#aboutus' className='nav-link'>ABOUT US</a>
+                <a href='#courses' className='nav-link'>COURSES</a>
+                <a href='#faq' className='nav-link'>F.A.Q</a>
+                <a href='#contactus' className='nav-link'>CONTACT US</a>
+                <a href='#reviews' className='nav-link'>REVIEWS</a>
             </Box>
             <Box className='getstarted-hamburger'>
                 <Box className='get-started'>

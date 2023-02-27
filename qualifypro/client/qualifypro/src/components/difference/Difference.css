@@ -1,0 +1,43 @@
+.difference-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difference-content > ul > li {
+  text-align: justify;
+}
+
+.difference-card {
+  background-color: #03a9f4 !important;
+  width: 100%;
+}
+
+.difference-icon {
+  width: 100px;
+}
+
+.diff-card {
+  display: flex;
+  align-items: stretch;
+}
+
+.d-card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 10px;
+}
+
+.lower-typo {
+  text-align: center;
+}
+
+.card-split {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

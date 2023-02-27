@@ -7,6 +7,9 @@
   color: #fff;
   height: 40px;
   align-items: center;
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 10;
 }
 
 .navbar-logo {
@@ -44,7 +47,6 @@
 .get-started {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .get-started-link {
@@ -53,6 +55,7 @@
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  width:max-content;
 }
 
 .get-started-link:hover {
@@ -203,5 +206,11 @@
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@media screen and (max-width:600px){
+  .navbar-links{
+    display:none;
   }
 }

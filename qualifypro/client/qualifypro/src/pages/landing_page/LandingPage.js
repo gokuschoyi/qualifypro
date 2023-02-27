@@ -1,8 +1,15 @@
 import React from 'react'
-import Navbar from '../../components/navbar/Navbar'
+import './LandingPage.css'
+import { Box } from '@mui/material'
+import { Navbar, Banner, Difference, Courses } from '../../components'
 const LandingPage = () => {
     return (
-        <div><Navbar /></div>
+        <Box className='content'>
+            <Navbar />
+            <Banner />
+            <Difference />
+            <Courses />
+        </Box>
     )
 }
 
