@@ -15,7 +15,7 @@ const Courses = () => {
 
     return (
         <Box id='courses' className='course-container padding'>
-            <Typography variant='h3' className='course-title'>
+            <Typography variant='h1' className='course-title'>
                 Courses
             </Typography>
             <Box className='course-description'>

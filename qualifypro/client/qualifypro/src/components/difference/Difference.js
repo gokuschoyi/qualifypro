@@ -7,8 +7,8 @@ import d3 from '../../assets/calendarWhite.png'
 import d4 from '../../assets/experienceWhite.png'
 const Difference = () => {
     return (
-        <Box id='aboutus' className='difference-container padding'>
-            <Typography variant='h3' className='difference-title'>
+        <Box id='aboutus' className='difference-container padding-difference'>
+            <Typography variant='h1' className='difference-title'>
                 How we are different from Others?
             </Typography>
             <Box className='difference-content'>

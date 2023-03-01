@@ -49,7 +49,7 @@ const Navbar = () => {
     return (
         <Box className='navbar-container'>
             <Box className='navbar-logo'>
-                <a className='logo' href='home'>QualifyPro</a>
+                <a className='logo' href='#home'>QualifyPro</a>
             </Box>
             <Box className='navbar-links'>
                 <a href='#home' className='nav-link'>HOME</a>

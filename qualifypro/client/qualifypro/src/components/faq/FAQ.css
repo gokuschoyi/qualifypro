@@ -1,0 +1,52 @@
+.faq-container{
+    min-height: 100vh;
+}
+
+.faq-questions-box{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.faq-accordion-summary{
+    background-color: #1098F7 !important;
+    color : white !important;
+}
+
+.faq-accordian-details{
+    background-color: #1098F7 !important;
+    opacity:80%;
+    color : white !important;
+}
+
+.accordian-title{
+    width: 70% !important;
+}
+
+@keyframes inAnimationFaq {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 0.8;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes outAnimationFaq {
+    0% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width : 600px){
+    .accordian-title{
+        width: 100% !important;
+    }
+  }

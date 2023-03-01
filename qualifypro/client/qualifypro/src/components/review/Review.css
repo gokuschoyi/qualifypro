@@ -1,0 +1,122 @@
+.review-container {
+  min-height: 100vh;
+}
+
+.review-card-container {
+  margin-top: 20px !important;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.review-card {
+  background-color: #1098f7 !important;
+  border-radius: 15px !important;
+  padding: 10px !important;
+}
+
+.reviewer-image {
+  width: 50px;
+}
+
+.card-centering {
+  display: flex !important;
+  padding: 15px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #1098f7 !important;
+}
+
+.review-stat-container {
+  min-height: 300px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 20px;
+  gap: 3rem;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+
+.order-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.milestone {
+  border-right: 3px solid #1098f7;
+  height: 200px;
+  background-color: #efefef;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.satisfied-clients {
+  border-right: 3px solid #1098f7;
+  height: 200px;
+  background-color: #efefef;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.experience {
+  border-right: 3px solid #1098f7;
+  height: 200px;
+  background-color: #efefef;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.success-rate{
+    border-right: 3px solid #1098f7;
+    height: 200px;
+    background-color: #efefef;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .review-stat-container {
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.5s ease;
+  }
+  .milestone {
+    border-right: none;
+    border-bottom: 3px solid #1098f7;
+  }
+  .satisfied-clients {
+    border-right: none;
+    border-bottom: 3px solid #1098f7;
+  }
+  .experience {
+    border-right: none;
+    border-bottom: 3px solid #1098f7;
+  }
+  .success-rate{
+    border-right: none;
+    border-bottom: 3px solid #1098f7;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .review-stat-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px 20px 10px 20px;
+    transition: all 0.5s ease;
+  }
+  .order-column {
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+}

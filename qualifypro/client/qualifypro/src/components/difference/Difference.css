@@ -41,3 +41,34 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+.padding-difference{
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 1200px){
+  .padding-difference{
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .padding-difference{
+    padding-top:6rem !important;
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .padding-difference{
+    padding-top:6rem !important;
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}

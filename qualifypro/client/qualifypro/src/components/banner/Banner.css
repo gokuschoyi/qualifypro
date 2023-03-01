@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  padding-top:2rem !important;
 }
 
 .banner-left-grid {
@@ -15,12 +16,14 @@
 .banner-title {
   color: #fff;
   transition: all 0.5s ease-in-out;
+  max-width: 700px;
 }
 
 .banner-subtitle {
   color: #fff;
   text-align: justify;
   transition: all 0.5s ease-in-out;
+  max-width: 700px;
 }
 
 .button-group {
@@ -49,7 +52,7 @@
     transition: all 0.5s ease-in-out;
   }
   .banner-container {
-    padding-top: 60px;
+    padding-top: 60px !important;
     transition: all 0.5s ease-in-out;
   }
 }
