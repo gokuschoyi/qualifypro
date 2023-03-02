@@ -58,19 +58,19 @@ const Footer = () => {
                     <Box className='footer-links'>
                         <ul>
                             <li>
-                                <Typography variant='h5' fontWeight='400' color='white'><a className='link' href='#faq' >F.A.Q's</a></Typography>
+                                <Typography variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >F.A.Q's</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Blogs</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Blogs</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Terms & Conditions</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Terms & Conditions</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Privacy Policy</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Privacy Policy</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Refund Policy</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Refund Policy</a></Typography>
                             </li>
                         </ul>
                     </Box>
@@ -79,16 +79,16 @@ const Footer = () => {
                     <Box className='footer-links-two'>
                         <ul>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Register Now</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Register Now</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Training</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Training</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Services</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#courses' >Services</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'>Contact Us</Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#contactus' >Contact Us</a></Typography>
                             </li>
                         </ul>
                     </Box>

@@ -15,13 +15,13 @@ const Banner = () => {
                             The ultimate destination for builders and contractors in Victoria, Australia. Get access to a wide range of services and resources to help you succeed in your building and construction projects. From license applications to renewal services, we have got you covered. Register now and join our community of registered builders and contractors. Building a better future, together!
                         </Typography>
                         <Box className='button-group'>
-                            <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', marginRight: '20px' }} sx={{
+                            <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#399ff7', marginRight: '20px' }} sx={{
                                 ':hover': {
                                     color: 'white !important',
                                     backgroundColor: '#f76e39 !important',
                                 },
                             }} >GET STARTED</Button>
-                            <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', }} sx={{
+                            <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#399ff7', }} sx={{
                                 ':hover': {
                                     color: 'white !important',
                                     backgroundColor: '#f76e39 !important',

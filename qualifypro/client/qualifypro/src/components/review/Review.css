@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   border-radius: 20px;
+  align-items: center;
 }
 
 .review-card {
@@ -26,9 +27,14 @@
   padding: 15px !important;
 }
 
+.slick-slider{
+  width:90% !important;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: #1098f7 !important;
+  font-size: 25px !important;
 }
 
 .review-stat-container {

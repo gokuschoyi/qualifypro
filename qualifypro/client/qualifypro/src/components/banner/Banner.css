@@ -1,10 +1,9 @@
 .banner-container {
   background-color: #3d39fc;
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
-  padding-top:2rem !important;
 }
 
 .banner-left-grid {
@@ -51,10 +50,7 @@
     transform: translateX(0px);
     transition: all 0.5s ease-in-out;
   }
-  .banner-container {
-    padding-top: 60px !important;
-    transition: all 0.5s ease-in-out;
-  }
+  
 }
 
 @media screen and (max-width: 600px) {

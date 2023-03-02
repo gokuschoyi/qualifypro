@@ -5,7 +5,7 @@
 .footer-container-main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
+  gap: 1rem;
   transition: all 0.5s ease;
 }
 
@@ -73,6 +73,30 @@
   cursor: pointer;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .footer-links-two > ul {
   display: flex;
   flex-direction: column;
@@ -112,7 +136,7 @@
     justify-content: center;
   }
   .column-three {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .column-four {
     justify-content: center;

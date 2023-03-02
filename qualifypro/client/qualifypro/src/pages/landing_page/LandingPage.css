@@ -5,6 +5,15 @@
     padding-bottom: 4rem;
 }
 
+.content{
+    margin-top:72px;
+}
+
+.landing-page{
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 1200px){
     .padding{
         padding-left: 2rem;

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './Navbar.css'
+import './CourseNavbar.css'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-const Navbar = () => {
+import { HashLink } from 'react-router-hash-link'
+const CourseNavbar = () => {
     const theme = useTheme();
     const md = useMediaQuery(theme.breakpoints.down('md'));
     const [toggle, setToggle] = useState(false);
@@ -35,12 +36,14 @@ const Navbar = () => {
         return (
             <Box className="ham-nav" style={toggle ? mountedStyle : unmountedStyle}>
                 <Box className='ham-navbar-links'>
-                    <a href='#home' className='ham-nav-link'>HOME</a>
-                    <a href='#aboutus' className='ham-nav-link'>ABOUT US</a>
-                    <a href='#courses' className='ham-nav-link'>COURSES</a>
-                    <a href='#faq' className='ham-nav-link'>F.A.Q</a>
-                    <a href='#contactus' className='ham-nav-link'>CONTACT US</a>
-                    <a href='#reviews' className='ham-nav-link'>REVIEWS</a>
+                    <ul>
+                        <li className='ham-nav-link'><HashLink to='/#home'>HOME</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='/#aboutus'>ABOUT US</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='/#courses'>COURSES</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='/#faq'>F.A.Q</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='/#contactus'>CONTACT US</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='/#reviews'>REVIEWS</HashLink></li>
+                    </ul>
                 </Box>
             </Box>
         )
@@ -49,15 +52,18 @@ const Navbar = () => {
     return (
         <Box className='navbar-container'>
             <Box className='navbar-logo'>
-                <a className='logo' href='#home'>QualifyPro</a>
+                <HashLink className='logo' to='/#home'>QualifyPro</HashLink>
+                
             </Box>
             <Box className='navbar-links'>
-                <a href='#home' className='nav-link'>HOME</a>
-                <a href='#aboutus' className='nav-link'>ABOUT US</a>
-                <a href='#courses' className='nav-link'>COURSES</a>
-                <a href='#faq' className='nav-link'>F.A.Q</a>
-                <a href='#contactus' className='nav-link'>CONTACT US</a>
-                <a href='#reviews' className='nav-link'>REVIEWS</a>
+                <ul className='navigation-li-links'>
+                    <li className='nav-link'><HashLink to='/#home'>HOME</HashLink></li>
+                    <li className='nav-link'><HashLink to='/#aboutus'>ABOUT US</HashLink></li>
+                    <li className='nav-link'><HashLink to='/#courses'>COURSES</HashLink></li>
+                    <li className='nav-link'><HashLink to='/#faq'>F.A.Q</HashLink></li>
+                    <li className='nav-link'><HashLink to='/#contactus'>CONTACT US</HashLink></li>
+                    <li className='nav-link'><HashLink to='/#reviews'>REVIEWS</HashLink></li>
+                </ul>
             </Box>
             <Box className='getstarted-hamburger'>
                 <Box className='get-started'>
@@ -74,4 +80,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default CourseNavbar

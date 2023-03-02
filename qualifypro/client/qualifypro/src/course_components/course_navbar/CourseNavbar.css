@@ -25,16 +25,23 @@
   transform: scale(1.1);
 }
 
-.navbar-links {
+.navbar-links > ul > li {
+  list-style: none;
+}
+
+.navbar-links > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation-li-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
 }
 
 .nav-link {
-  color: #fff;
-  text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -49,24 +56,18 @@
   flex-direction: row;
 }
 
-.get-started :hover {
-  background-color: #f76e39;
-  border-radius: 4px;
-}
-
 .get-started-link {
-  display:flex;
+  display: flex;
   align-items: center;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  width:max-content;
+  width: max-content;
 }
 
 .get-started-link:hover {
-  padding: 0 5px 0 5px;
   transform: scale(1.1);
 }
 
@@ -127,29 +128,29 @@
 }
 
 @-webkit-keyframes scale-out-center {
-    0% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      opacity: 0;
-    }
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
-  @keyframes scale-out-center {
-    0% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      opacity: 0;
-    }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
   }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
 
 .getstarted-hamburger {
   display: flex;
@@ -179,15 +180,31 @@
   gap: 1rem;
 }
 
+.ham-navbar-links > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.ham-navbar-links > ul > li {
+  list-style: none;
+  padding-left: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ham-navbar-links > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .ham-nav-link {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  padding-left: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .ham-nav-link:hover {
@@ -217,8 +234,8 @@
   }
 }
 
-@media screen and (max-width:600px){
-  .navbar-links{
-    display:none;
+@media screen and (max-width: 600px) {
+  .navbar-links {
+    display: none;
   }
 }

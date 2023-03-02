@@ -4,6 +4,7 @@ import Course1 from '../../assets/course1.png'
 import Course2 from '../../assets/course2.jpg'
 import Course3 from '../../assets/course3.jpg'
 import Collapse from '@mui/material/Collapse';
+import { useNavigate } from 'react-router-dom'
 import { Box, Typography, Card, CardContent, CardActions, Button, Grid, CardMedia } from '@mui/material'
 
 const Courses = () => {
@@ -12,6 +13,13 @@ const Courses = () => {
         setShowMore((prev) => !prev)
     }
     // console.log(showMore)
+    const navigate = useNavigate()
+
+    const showCourseDetails = (e) => {
+        const { value } = e.target
+        navigate(`/courses/${value}`)
+        // console.log(value)
+    }
 
     return (
         <Box id='courses' className='course-container padding'>
@@ -54,7 +62,7 @@ const Courses = () => {
                                 </CardContent>
                             </Box>
                             <CardActions className='action-button'>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button onClick={(e) => showCourseDetails(e)} value='courseOne' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -91,7 +99,7 @@ const Courses = () => {
                                 </CardContent>
                             </Box>
                             <CardActions>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button onClick={(e) => showCourseDetails(e)} value='courseTwo' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -128,7 +136,7 @@ const Courses = () => {
                                 </CardContent>
                             </Box>
                             <CardActions>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button onClick={(e) => showCourseDetails(e)} value='courseThree' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -170,7 +178,7 @@ const Courses = () => {
                                         </CardContent>
                                     </Box>
                                     <CardActions className='action-button'>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => showCourseDetails(e)} value='courseFour' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',
@@ -207,7 +215,7 @@ const Courses = () => {
                                         </CardContent>
                                     </Box>
                                     <CardActions>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => showCourseDetails(e)} value='courseFive' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',
@@ -244,7 +252,7 @@ const Courses = () => {
                                         </CardContent>
                                     </Box>
                                     <CardActions>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => showCourseDetails(e)} value='courseSix' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',

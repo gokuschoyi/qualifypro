@@ -4,14 +4,16 @@ import { Box } from '@mui/material'
 import { Navbar, Banner, Difference, Courses, FAQ, ContactUs, Review, Footer } from '../../components'
 const LandingPage = () => {
     return (
-        <Box className='content'>
+        <Box className='landing-page'>
             <Navbar />
-            <Banner />
-            <Difference />
-            <Courses />
-            <FAQ />
-            <ContactUs />
-            <Review />
+            <Box className='content'>
+                <Banner />
+                <Difference />
+                <Courses />
+                <FAQ />
+                <ContactUs />
+                <Review />
+            </Box>
             <Footer />
         </Box>
     )
