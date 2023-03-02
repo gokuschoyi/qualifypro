@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import './Navbar.css'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-const Navbar = () => {
+const Navbar = (props) => {
+    const { toggle, setToggle, showNav } = props;
     const theme = useTheme();
     const md = useMediaQuery(theme.breakpoints.down('md'));
-    const [toggle, setToggle] = useState(false);
-    const showNav = () => {
-        setToggle((prev) => !prev)
-    }
     // console.log(md)
     useEffect(() => {
         if (md) {
@@ -24,7 +21,7 @@ const Navbar = () => {
         if (!md) {
             setToggle(false)
         }
-    }, [md])
+    }, [md, setToggle])
 
     const hamburgerContent = () => {
         const mountedStyle = { animation: "inAnimation 250ms ease-in" };

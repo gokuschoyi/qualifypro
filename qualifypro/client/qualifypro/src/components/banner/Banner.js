@@ -1,13 +1,15 @@
 import React from 'react'
 import './Banner.css'
+import { Particle } from '../../components'
 import BannerImage from '../../assets/bannerPic.jpg'
 import { Box, Grid, Button, Typography } from '@mui/material'
 const Banner = () => {
     return (
         <Box id='home' className='banner-container'>
-            <Grid justifyContent='center' container spacing={2}  p={{ xs: 2, md: 3, lg: 5 }}>
+            {/* <Particle /> */} {/* This is the particle effect */}
+            <Grid justifyContent='center' container spacing={2} p={{ xs: 2, md: 3, lg: 5 }}>
                 <Grid item xs={11} sm={11} md={11} lg={7} xl={7} display='flex' alignItems='center'>
-                    <Box  className='banner-left-grid'>
+                    <Box className='banner-left-grid'>
                         <Typography variant='h1' fontFamily='Montserrat' fontWeight={300} className='banner-title'>
                             Empowering Builders & Contractors with a One-Stop Destination
                         </Typography>

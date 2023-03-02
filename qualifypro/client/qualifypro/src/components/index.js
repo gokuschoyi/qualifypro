@@ -6,5 +6,6 @@ import FAQ from "./faq/FAQ";
 import ContactUs from "./contact_us/ContactUs";
 import Review from "./review/Review";
 import Footer from "./footer/Footer";
+import Particle from "./particle/Particle";
 
-export { Navbar, Banner, Difference, Courses, FAQ, ContactUs, Review, Footer };
+export { Navbar, Banner, Difference, Courses, FAQ, ContactUs, Review, Footer, Particle };

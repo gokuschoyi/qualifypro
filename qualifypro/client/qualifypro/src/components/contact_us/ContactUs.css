@@ -1,6 +1,8 @@
 .contactus-container {
   min-height: 100vh;
   background-color: #efefef;
+  position:relative;
+  z-index: 9;
 }
 
 .contactus-grid-container {

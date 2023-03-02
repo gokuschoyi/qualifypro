@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './CourseDetails.css'
 import { CourseNavbar } from '../../course_components'
@@ -8,6 +8,7 @@ import CourseTwo from '../../assets/course2.jpg'
 import CourseThree from '../../assets/course3.jpg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
+import KeyboardDoubleArrowUpOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowUpOutlined';
 import { Footer } from '../../components'
 
 import { Box, Typography, Grid, CardMedia, Button, Divider, Card, CardContent, CardActions } from '@mui/material'
@@ -17,7 +18,7 @@ const CourseDetails = () => {
     var data = COURSE_DATA[courseId]
 
     const filteredCourses = Object.values(COURSE_DATA).filter(course => course.courseId !== courseId);
-    console.log(data.courseId)
+    // console.log(data.courseId)
 
     const handleMoreCourseInfo = value => (e) => {
         navigate(`/courses/${value}`)
@@ -26,6 +27,13 @@ const CourseDetails = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
 
     return (
         <Box className='course-details-container'>
@@ -264,6 +272,9 @@ const CourseDetails = () => {
                             </Box>
                         </Grid>
                     </Grid>
+                    <Box className='scroll-to-top '>
+                        <KeyboardDoubleArrowUpOutlinedIcon onClick={scrollToTop} />
+                    </Box>
                     <Box className='disclaimer'>
                         <Typography sx={{ width: '80%' }} variant='h5' textAlign='center' color='black' fontWeight='500'>Please note that this is a general overview and that course details may vary depending on the institution offering the course. It is recommended that you consult with the institution offering the course for specific course details and requirements.</Typography>
                     </Box>

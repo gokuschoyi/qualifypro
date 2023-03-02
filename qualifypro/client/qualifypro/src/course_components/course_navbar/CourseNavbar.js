@@ -34,15 +34,15 @@ const CourseNavbar = () => {
             animationFillMode: "forwards"
         };
         return (
-            <Box className="ham-nav" style={toggle ? mountedStyle : unmountedStyle}>
+            <Box className="course-ham-nav" style={toggle ? mountedStyle : unmountedStyle}>
                 <Box className='ham-navbar-links'>
                     <ul>
-                        <li className='ham-nav-link'><HashLink to='/#home'>HOME</HashLink></li>
-                        <li className='ham-nav-link'><HashLink to='/#aboutus'>ABOUT US</HashLink></li>
-                        <li className='ham-nav-link'><HashLink to='/#courses'>COURSES</HashLink></li>
-                        <li className='ham-nav-link'><HashLink to='/#faq'>F.A.Q</HashLink></li>
-                        <li className='ham-nav-link'><HashLink to='/#contactus'>CONTACT US</HashLink></li>
-                        <li className='ham-nav-link'><HashLink to='/#reviews'>REVIEWS</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#learn'>OVERVIEW</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#content'>CONTENT</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#assessment'>ASSESSMENT</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#requirement'>REQUIREMENTS</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#career'>CAREER</HashLink></li>
+                        <li className='ham-nav-link'><HashLink to='#fee'>FEE</HashLink></li>
                     </ul>
                 </Box>
             </Box>

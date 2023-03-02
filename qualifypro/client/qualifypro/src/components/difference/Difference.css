@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position:relative;
+  z-index: 9;
 }
 
 .difference-content > ul > li {
