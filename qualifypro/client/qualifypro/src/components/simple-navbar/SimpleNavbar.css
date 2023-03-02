@@ -1,0 +1,22 @@
+.simple-navbar-logo{
+    
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    
+    background-color: blue;
+    padding:20px
+}
+
+.simple-logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+.go-back{
+    cursor:pointer
+}

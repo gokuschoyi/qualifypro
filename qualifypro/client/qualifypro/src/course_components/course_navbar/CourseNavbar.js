@@ -53,16 +53,15 @@ const CourseNavbar = () => {
         <Box className='navbar-container'>
             <Box className='navbar-logo'>
                 <HashLink className='logo' to='/#home'>QualifyPro</HashLink>
-                
             </Box>
             <Box className='navbar-links'>
                 <ul className='navigation-li-links'>
-                    <li className='nav-link'><HashLink to='/#home'>HOME</HashLink></li>
-                    <li className='nav-link'><HashLink to='/#aboutus'>ABOUT US</HashLink></li>
-                    <li className='nav-link'><HashLink to='/#courses'>COURSES</HashLink></li>
-                    <li className='nav-link'><HashLink to='/#faq'>F.A.Q</HashLink></li>
-                    <li className='nav-link'><HashLink to='/#contactus'>CONTACT US</HashLink></li>
-                    <li className='nav-link'><HashLink to='/#reviews'>REVIEWS</HashLink></li>
+                    <li className='nav-link'><HashLink to='#learn'>OVERVIEW</HashLink></li>
+                    <li className='nav-link'><HashLink to='#content'>CONTENT</HashLink></li>
+                    <li className='nav-link'><HashLink to='#assessment'>ASSESSMENT</HashLink></li>
+                    <li className='nav-link'><HashLink to='#requirement'>REQUIREMENTS</HashLink></li>
+                    <li className='nav-link'><HashLink to='#career'>CAREER</HashLink></li>
+                    <li className='nav-link'><HashLink to='#fee'>FEE</HashLink></li>
                 </ul>
             </Box>
             <Box className='getstarted-hamburger'>

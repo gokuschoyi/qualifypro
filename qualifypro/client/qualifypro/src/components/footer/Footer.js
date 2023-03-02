@@ -64,13 +64,13 @@ const Footer = () => {
                                 <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Blogs</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Terms & Conditions</a></Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='/terms-and-conditions' >Terms & Conditions</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Privacy Policy</a></Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='/privacy-policy' >Privacy Policy</a></Typography>
                             </li>
                             <li>
-                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='#faq' >Refund Policy</a></Typography>
+                                <Typography className='link-hover' variant='h5' fontWeight='400' color='white'><a className='link hover-underline-animation' href='/refund-policy' >Refund Policy</a></Typography>
                             </li>
                         </ul>
                     </Box>

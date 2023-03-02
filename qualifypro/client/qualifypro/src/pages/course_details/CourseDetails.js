@@ -52,7 +52,7 @@ const CourseDetails = () => {
                                     sx={{ padding: '20px', height: '100%', width: '90%' }}
                                     component="img"
                                     image={courseId === 'courseOne' ? CourseOne : '' || courseId === 'courseTwo' ? CourseTwo : '' || courseId === 'courseThree' ? CourseThree : ''}
-                                    title="course One"
+                                    title={`${data.courseId}`}
                                 />
                             </Box>
                             <Box className='course-link-box'>

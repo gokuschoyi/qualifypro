@@ -1,0 +1,31 @@
+.privacy-policy-container{
+    padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .privacy-policy-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .privacy-policy-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .privacy-policy-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.privacy-policy-container > .inner-spacing:nth-child(odd) {
+  background-color: #f2f2f2;
+}

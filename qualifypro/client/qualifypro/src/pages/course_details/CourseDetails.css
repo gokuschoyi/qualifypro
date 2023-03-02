@@ -31,6 +31,30 @@
   border-radius: 20px;
 }
 
+.learn-box{
+  scroll-margin-top: 72px;
+}
+
+.content-box{
+  scroll-margin-top: 72px;
+}
+
+.assessment-box{
+  scroll-margin-top: 72px;
+}
+
+.requirement-box{
+  scroll-margin-top: 72px;
+}
+
+.career-box{
+  scroll-margin-top: 72px;
+}
+
+.fee-box{
+  scroll-margin-top: 72px;
+}
+
 .course-link-box {
   margin: 1rem 0 1rem 0;
   padding: 0.2rem 0 0.2rem 0;
