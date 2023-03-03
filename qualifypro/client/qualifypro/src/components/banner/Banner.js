@@ -7,8 +7,9 @@ const Banner = () => {
     return (
         <Box id='home' className='banner-container'>
             {/* <Particle /> */} {/* This is the particle effect */}
+            <div className='background'></div>
             <Grid justifyContent='center' container spacing={2} p={{ xs: 2, md: 3, lg: 5 }}>
-                <Grid item xs={11} sm={11} md={11} lg={7} xl={7} display='flex' alignItems='center'>
+                <Grid item xs={11} sm={11} md={11} lg={7} xl={7} display='flex' justifyContent='center' alignItems='center'>
                     <Box className='banner-left-grid'>
                         <Typography variant='h1' fontFamily='Montserrat' fontWeight={300} className='banner-title'>
                             Empowering Builders & Contractors with a One-Stop Destination
