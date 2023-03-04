@@ -46,7 +46,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jhon Doe',
-            course_fee:'$6000',	
+            course_fee:6000,	
         },
         courseTwo: {
             title:'Certificate IV in Building & Construction (Building)',
@@ -95,7 +95,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jhon Doe',
-            course_fee:'$1000',
+            course_fee:1000,
         },
         courseThree: {
             title:'Certificate III Work Health & Safety',
@@ -144,7 +144,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jhon Doe',
-            course_fee:'$4000',
+            course_fee:4000,
         },
         courseFour: {
             title:'Certificate III Work Health & Safety',
@@ -193,7 +193,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jane Doe',
-            course_fee:'$10000',
+            course_fee:10000,
         },
         courseFive: {
             title:'Certificate III Work Health & Safety',
@@ -242,7 +242,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jhon Doe Mark',
-            course_fee:'$15000',
+            course_fee:15000,
         },
         courseSix: {
             title:'Certificate III Work Health & Safety',
@@ -291,7 +291,7 @@ const COURSE_DATA = {
             dates:'We have intakes in March, June and November',
             location:'Zoom | Melbourne',
             instructor:'Jhon Doe',
-            course_fee:'$20000',
+            course_fee:20000,
         }
 
     }

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const logger = require('./middleware/logger/Logger');
 const config = require('./config');
 const generateInvoice = require('./middleware/invoice_generator/InvoiceGenerator');
+const createCheckoutSession = require('./api/checkout');
 
 const app = express();
 
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/generateInvoice', generateInvoice);
+
+app.post('/createSession', createCheckoutSession);
 
 app.listen(config.port, () => {
     console.log(`Server listening on port ${config.port}`);

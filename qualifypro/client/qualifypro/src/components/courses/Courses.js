@@ -21,6 +21,12 @@ const Courses = () => {
         // console.log(value)
     }
 
+    const registerCourse = (e) => {
+        const { value } = e.target
+        navigate(`/register/${value}`)
+        // console.log(value)
+    }
+
     return (
         <Box id='courses' className='course-container padding'>
             <Typography variant='h1' className='course-title'>
@@ -68,7 +74,7 @@ const Courses = () => {
                                         backgroundColor: '#f76e39 !important',
                                     },
                                 }} >MORE</Button>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button size="small" onClick={(e) => registerCourse(e)} value='courseOne' variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -105,7 +111,7 @@ const Courses = () => {
                                         backgroundColor: '#f76e39 !important',
                                     },
                                 }} >MORE</Button>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button onClick={(e) => registerCourse(e)} value='courseTwo' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -142,7 +148,7 @@ const Courses = () => {
                                         backgroundColor: '#f76e39 !important',
                                     },
                                 }} >MORE</Button>
-                                <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                <Button onClick={(e) => registerCourse(e)} value='courseThree' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                     ':hover': {
                                         color: 'white !important',
                                         backgroundColor: '#f76e39 !important',
@@ -184,7 +190,7 @@ const Courses = () => {
                                                 backgroundColor: '#f76e39 !important',
                                             },
                                         }} >MORE</Button>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => registerCourse(e)} value='courseFour' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',
@@ -221,7 +227,7 @@ const Courses = () => {
                                                 backgroundColor: '#f76e39 !important',
                                             },
                                         }} >MORE</Button>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => registerCourse(e)} value='courseFive' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',
@@ -258,7 +264,7 @@ const Courses = () => {
                                                 backgroundColor: '#f76e39 !important',
                                             },
                                         }} >MORE</Button>
-                                        <Button size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                        <Button onClick={(e) => registerCourse(e)} value='courseSix' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#f76e39 !important',

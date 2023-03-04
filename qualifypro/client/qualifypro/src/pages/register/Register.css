@@ -1,0 +1,100 @@
+.regsiter-container{
+    background-color: #f5f5f5;
+}
+.register-content{
+    min-height: 100vh;
+    background-color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 6rem;
+    margin-left: 6rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.client-details-box{
+    padding-top:20px;
+}
+
+.client-name-box{
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.address-box{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: space-between;
+}
+
+.product-description{
+    padding-top:20px;
+}
+
+.product-description-header{
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.product-description-details{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.product-description-gst{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.product-description-total{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.pay-now{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.tandc-link>a{
+    color:blue;
+}
+
+.checkbox{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top:20px;
+    margin-bottom: 20px;align-items: center;
+}
+
+@media screen and (max-width :600px){
+    .register-content{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        transition: all 0.3s ease;
+    }
+}
