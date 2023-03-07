@@ -1,0 +1,10 @@
+.client-name-box-side{
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    /* margin-top: 10px; */
+}
+
+.dialog-content-box{
+    padding-top: 10px !important;
+}

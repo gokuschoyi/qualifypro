@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './CourseDetails.css'
 import { CourseNavbar } from '../../course_components'
@@ -20,13 +20,24 @@ const CourseDetails = () => {
     const filteredCourses = Object.values(COURSE_DATA).filter(course => course.courseId !== courseId);
     // console.log(data.courseId)
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    const [toggle, setToggle] = useState(false);
+    const showNav = () => {
+        setToggle((prev) => !prev)
+    }
+
     const handleMoreCourseInfo = value => (e) => {
+        window.scrollTo(0, 0)
         navigate(`/courses/${value}`)
         console.log(value)
     }
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    })
+    const registerCourse = (e) => {
+        const { value } = e.target
+        navigate(`/register/${value}`)
+        // console.log(value)
+    }
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -37,8 +48,8 @@ const CourseDetails = () => {
 
     return (
         <Box className='course-details-container'>
-            <CourseNavbar />
-            <Box className='course-details-content'>
+            <CourseNavbar toggle={toggle} setToggle={setToggle} showNav={showNav}/>
+            <Box className='course-details-content' onClick={(e) => setToggle(false)}>
                 <Box className='course-details-banner'>
                     <Typography variant='h1' color='white' fontWeight='400'>COURSE DETAILS</Typography>
                     <Typography variant='h3' color='white' fontWeight='400' sx={{ textAlign: 'center' }}>{data.title}</Typography>
@@ -179,7 +190,7 @@ const CourseDetails = () => {
                                     </Box>
                                 </Box>
                                 <Box className='course-enroll'>
-                                    <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', marginRight: '20px' }} sx={{
+                                    <Button onClick={(e) => registerCourse(e)} value={`${courseId}`} size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', marginRight: '20px' }} sx={{
                                         ':hover': {
                                             color: 'white !important',
                                             backgroundColor: '#4d48ff !important',
@@ -212,10 +223,10 @@ const CourseDetails = () => {
                                 <Box className='price-box-container'>
                                     <Box className='price-box'>
                                         <Typography variant='h5' textAlign='justify' color='black' fontWeight='600'>Price : </Typography>
-                                        <Typography variant='h5' textAlign='justify' color='black' fontWeight='400'>{`${data.course_fee}`}</Typography>
+                                        <Typography variant='h5' textAlign='justify' color='black' fontWeight='400'>{`$ ${data.course_fee}`}</Typography>
                                     </Box>
-                                    <Box className='course-enroll'>
-                                        <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', marginRight: '20px' }} sx={{
+                                    <Box className='course-enroll-side'>
+                                        <Button onClick={(e) => registerCourse(e)} value={`${courseId}`} size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#f76e39', marginRight: '20px' }} sx={{
                                             ':hover': {
                                                 color: 'white !important',
                                                 backgroundColor: '#4d48ff !important',
@@ -258,7 +269,7 @@ const CourseDetails = () => {
                                                             backgroundColor: '#f76e39 !important',
                                                         },
                                                     }} >MORE</Button>
-                                                    <Button id={`${course.courseId}`} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                                    <Button id={`${course.courseId}`} onClick={(e) => registerCourse(e)} value={`${course.courseId}`} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                                         ':hover': {
                                                             color: 'white !important',
                                                             backgroundColor: '#f76e39 !important',

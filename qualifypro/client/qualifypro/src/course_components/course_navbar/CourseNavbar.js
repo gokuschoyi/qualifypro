@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './CourseNavbar.css'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import { HashLink } from 'react-router-hash-link'
-const CourseNavbar = () => {
+const CourseNavbar = (props) => {
+    const {toggle, setToggle, showNav} = props
     const theme = useTheme();
     const md = useMediaQuery(theme.breakpoints.down('md'));
-    const [toggle, setToggle] = useState(false);
-    const showNav = () => {
-        setToggle((prev) => !prev)
-    }
+    
     // console.log(md)
     useEffect(() => {
         if (md) {
@@ -25,7 +23,7 @@ const CourseNavbar = () => {
         if (!md) {
             setToggle(false)
         }
-    }, [md])
+    }, [md, setToggle])
 
     const hamburgerContent = () => {
         const mountedStyle = { animation: "inAnimation 250ms ease-in" };

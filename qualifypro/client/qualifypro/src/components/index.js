@@ -8,6 +8,7 @@ import Review from "./review/Review";
 import Footer from "./footer/Footer";
 import Particle from "./particle/Particle";
 import SimpleNavbar from "./simple-navbar/SimpleNavbar";
+import SideContact from "./side-contact/SideContact";
 
 export {
     Navbar,
@@ -20,4 +21,5 @@ export {
     Footer,
     Particle,
     SimpleNavbar,
+    SideContact
 };

@@ -1,66 +1,64 @@
 import React, { useState } from 'react'
 import './ContactUs.css'
-import { Box, Grid, Typography, Button, Card, Divider, TextField, Alert, IconButton } from '@mui/material'
+import { Box, Grid, Typography, Button, Card, Divider, TextField } from '@mui/material'
 import Instagram from '../../assets/instagram.png'
 import Facebook from '../../assets/facebook.png'
-import Collapse from '@mui/material/Collapse';
-import CloseIcon from '@mui/icons-material/Close';
 const ContactUs = () => {
     const initialContactUsData = {
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        postcode: '',
-        subject: '',
-        email: '',
-        message: '',
+        firstName: { value: '', error: false, helperText: '' },
+        lastName: { value: '', error: false, helperText: '' },
+        phoneNumber: { value: '', error: false, helperText: '' },
+        postcode: { value: '', error: false, helperText: '' },
+        subject: { value: '', error: false, helperText: '' },
+        email: { value: '', error: false, helperText: '' },
+        message: { value: '', error: false, helperText: '' },
     }
 
     const [contactUsData, setContactUsData] = useState(initialContactUsData)
 
-    const { firstName, lastName, phoneNumber, postcode, subject, email, message } = contactUsData
-
     const handleContactUsData = (e) => {
         const { name, value } = e.target
-        setContactUsData({ ...contactUsData, [name]: value })
+        setContactUsData({
+            ...contactUsData, [name]: { ...contactUsData[name], value }
+        })
     }
 
     const handleFormSubmit = () => {
-        if (firstName === '' || lastName === '' || phoneNumber === '' || subject === '' || email === '' || message === '') {
-            setOpen(true)
-            setError('Please fill all the fields')
+        const formFields = Object.keys(contactUsData)
+        let newContactUsData = { ...contactUsData }
+        formFields.forEach(field => {
+            if (contactUsData[field].value === '') {
+                newContactUsData = {
+                    ...newContactUsData,
+                    [field]: {
+                        ...contactUsData[field],
+                        error: true,
+                        helperText: 'This field is required'
+                    }
+                }
+            } else {
+                newContactUsData = {
+                    ...newContactUsData,
+                    [field]: {
+                        ...contactUsData[field],
+                        error: false,
+                        helperText: ''
+                    }
+                }
+            }
+        })
+        setContactUsData(newContactUsData)
+        const isNotEmpty = Object.values(contactUsData).every(field => field.value !== '')
+        if (isNotEmpty) {
+            console.log('not empty fields')
         }
         else {
-            console.log('form submitted')
-            console.log(contactUsData)
+            console.log('empty fields')
         }
-        if (firstName === '') {
-            setError('First name is required')
-        }
-        if (lastName === '') {
-            setError('Last name is required')
-        }
-        if (phoneNumber === '') {
-            setError('Phone number is required')
-        }
-        if (subject === '') {
-            setError('Subject is required')
-        }
-        if (email === '') {
-            setError('Email is required')
-        }
-        if (message === '') {
-            setError('Message is required')
-        }
-
     }
 
-    const [open, setOpen] = React.useState(false);
-    const [error, setError] = React.useState('');
-
-    const hideError = () => {
-        setOpen(false);
-        setError('')
+    const handleClear = () => {
+        setContactUsData(initialContactUsData)
     }
 
     return (
@@ -104,24 +102,7 @@ const ContactUs = () => {
                 </Grid>
                 <Grid item xs={12} md={6} className='contactus-right'>
                     <Card sx={{ width: '100%', boxShadow: 10 }} className='grid-card-right'>
-                        <Collapse in={open}>
-                            <Alert severity="error"
-                                action={
-                                    <IconButton
-                                        aria-label="close"
-                                        color="inherit"
-                                        size="small"
-                                        onClick={() => hideError()}
-                                    >
-                                        <CloseIcon fontSize="inherit" />
-                                    </IconButton>
-                                }
-                                sx={{ mb: 2 }}
-                            >
-                                {error}
-                            </Alert>
-                        </Collapse>
-                        <Box className='client-name-box'>
+                        <Box className='client-name-box-contact'>
                             <TextField
                                 size="small"
                                 sx={{
@@ -141,7 +122,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='firstName'
-                                value={firstName}
+                                value={contactUsData.firstName.value}
+                                error={contactUsData.firstName.error}
+                                helperText={contactUsData.firstName.helperText}
                                 id="outlined-firstname"
                                 label="First Name"
                                 variant="outlined"
@@ -166,7 +149,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='lastName'
-                                value={lastName}
+                                value={contactUsData.lastName.value}
+                                error={contactUsData.lastName.error}
+                                helperText={contactUsData.lastName.helperText}
                                 id="outlined-username"
                                 label="Last Name"
                                 variant="outlined"
@@ -193,7 +178,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='phoneNumber'
-                                value={phoneNumber}
+                                value={contactUsData.phoneNumber.value}
+                                error={contactUsData.phoneNumber.error}
+                                helperText={contactUsData.phoneNumber.helperText}
                                 id="outlined-lastname"
                                 label="Phone Number"
                                 variant="outlined"
@@ -204,6 +191,7 @@ const ContactUs = () => {
                             <TextField
                                 size="small"
                                 sx={{
+                                    width: '46%',
                                     padding: '10px',
                                     '& label.Mui-focused': {
                                         color: 'blue',
@@ -219,7 +207,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='postcode'
-                                value={postcode}
+                                value={contactUsData.postcode.value}
+                                error={contactUsData.postcode.error}
+                                helperText={contactUsData.postcode.helperText}
                                 id="outlined-postcode"
                                 label="Postcode"
                                 variant="outlined"
@@ -230,6 +220,7 @@ const ContactUs = () => {
                             <TextField
                                 size="small"
                                 sx={{
+                                    width: '46%',
                                     padding: '10px',
                                     '& label.Mui-focused': {
                                         color: 'blue',
@@ -245,7 +236,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='subject'
-                                value={subject}
+                                value={contactUsData.subject.value}
+                                error={contactUsData.subject.error}
+                                helperText={contactUsData.subject.helperText}
                                 id="outlined-subject"
                                 label="Subject"
                                 variant="outlined"
@@ -272,7 +265,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='email'
-                                value={email}
+                                value={contactUsData.email.value}
+                                error={contactUsData.email.error}
+                                helperText={contactUsData.email.helperText}
                                 id="outlined-email"
                                 label="Email"
                                 variant="outlined"
@@ -301,7 +296,9 @@ const ContactUs = () => {
                                 }}
                                 onChange={(e) => handleContactUsData(e)}
                                 name='message'
-                                value={message}
+                                value={contactUsData.message.value}
+                                error={contactUsData.message.error}
+                                helperText={contactUsData.message.helperText}
                                 id="outlined-message"
                                 label="Message"
                                 variant="outlined"
@@ -309,6 +306,12 @@ const ContactUs = () => {
                             />
                         </Box>
                         <Box className='submit-form'>
+                            <Button onClick={handleClear} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                ':hover': {
+                                    color: 'white !important',
+                                    backgroundColor: '#f76e39 !important',
+                                },
+                            }} >Clear</Button>
                             <Button onClick={handleFormSubmit} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
                                 ':hover': {
                                     color: 'white !important',

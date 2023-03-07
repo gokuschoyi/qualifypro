@@ -5,6 +5,34 @@
     padding-bottom: 4rem;
 }
 
+.side-contact{
+    position: fixed;
+    top:33%;
+    z-index: 15;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    height:300px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.background-side-contact{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: bisque;
+    transform: skew(0deg, 10deg);
+    /* move skewed background into position */
+    transform-origin: left;
+    z-index: -1;
+}
+
 .content{
     margin-top:72px;
 }
@@ -18,6 +46,8 @@
     padding:2rem;
     display:flex;
     justify-content: flex-end;
+    position: relative;
+    z-index: 9;
 }
 
 .scroll-to-top > svg {
@@ -44,5 +74,9 @@
     .padding{
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    .side-contact{
+        width:1.5rem !important;
+        transition: all 0.5s ease;
     }
 }

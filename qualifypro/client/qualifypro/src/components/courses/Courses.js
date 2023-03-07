@@ -279,6 +279,7 @@ const Courses = () => {
 
                 <Box display='flex' justifyContent='center'>
                     <Button onClick={handleShowMore} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                        marginTop:'25px',
                         ':hover': {
                             color: 'white !important',
                             backgroundColor: '#f76e39 !important',

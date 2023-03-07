@@ -6,7 +6,7 @@ import KeyboardDoubleArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardDou
 const SimpleNavbar = () => {
     const navigate = useNavigate()
     const goBack = () => {
-        navigate('/')
+        navigate(-1)
     }
     return (
         <Box className='simple-navbar'>

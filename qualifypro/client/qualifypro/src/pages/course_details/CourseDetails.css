@@ -31,27 +31,27 @@
   border-radius: 20px;
 }
 
-.learn-box{
+.learn-box {
   scroll-margin-top: 72px;
 }
 
-.content-box{
+.content-box {
   scroll-margin-top: 72px;
 }
 
-.assessment-box{
+.assessment-box {
   scroll-margin-top: 72px;
 }
 
-.requirement-box{
+.requirement-box {
   scroll-margin-top: 72px;
 }
 
-.career-box{
+.career-box {
   scroll-margin-top: 72px;
 }
 
-.fee-box{
+.fee-box {
   scroll-margin-top: 72px;
 }
 
@@ -135,8 +135,8 @@
   gap: 1rem;
   margin-top: 20px;
   transition: all 0.5s ease;
-  border : 1px solid #020202 !important;
-  padding:5px;
+  border: 1px solid #020202 !important;
+  padding: 5px;
 }
 
 .short-course-row {
@@ -145,6 +145,10 @@
 }
 
 .course-enroll {
+  margin-top: 20px;
+}
+
+.course-enroll-side {
   margin-top: 20px;
 }
 
@@ -157,18 +161,18 @@
 .course-feature-box {
   background-color: white;
 }
-.course-feature-course-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    padding:10px
+.course-feature-course-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 10px;
 }
 
-.price-box{
-    display:flex;
-    flex-direction:row;
+.price-box {
+  display: flex;
+  flex-direction: row;
 }
 
 .course-feature-row {
@@ -176,19 +180,19 @@
   flex-direction: row;
 }
 
-.price-box-container{
-    padding:10px;
+.price-box-container {
+  padding: 10px;
 }
-.relatedcoursecard-container{
-    margin-top: 10px;
-    margin-bottom: 10px;
+.relatedcoursecard-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.related-courses{
-    margin-top:40px;
+.related-courses {
+  margin-top: 40px;
 }
-.relatedcourse-course-descritpion{
-    padding-top: 10px;;
+.relatedcourse-course-descritpion {
+  padding-top: 10px;
 }
 @media screen and (max-width: 1200px) {
   .course-info-box {
@@ -196,18 +200,24 @@
   }
 }
 
-@media screen and (max-width:900px){
-    .short-course-details{
-        display:none;
-        transition: all 0.5s ease;
-    }
-    .course-enroll{
-        display: none;
-    }
-    .course-final-description{
-        margin-top:4rem;
-        margin-bottom: 4rem;
-    }
+@media screen and (max-width: 900px) {
+  .individual-course {
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 20px;
+    background: white;
+  }
+  .short-course-details {
+    display: none;
+    transition: all 0.5s ease;
+  }
+  .course-enroll {
+    display: none;
+  }
+  .course-final-description {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }
 
 @media screen and (max-width: 700px) {

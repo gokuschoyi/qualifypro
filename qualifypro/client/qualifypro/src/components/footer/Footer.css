@@ -1,6 +1,7 @@
 .footer-container {
   padding: 2rem;
   background-color: #3d39fc;
+  z-index: 15;
 }
 .footer-container-main {
   display: grid;
