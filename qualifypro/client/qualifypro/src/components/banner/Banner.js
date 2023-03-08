@@ -35,7 +35,7 @@ const Banner = () => {
                 </Grid>
                 <Grid item xs={11} sm={11} md={11} lg={4} xl={4}>
                     <Box className='bannerimage-holder'>
-                        <img className='image' src={BannerImage} alt='bannerImage' />
+                        <img className='image' title='banner image' loading='lazy' src={BannerImage} alt='bannerImage' />
                     </Box>
                 </Grid>
             </Grid>

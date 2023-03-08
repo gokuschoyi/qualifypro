@@ -17,9 +17,8 @@ import {
     Alert
 } from '@mui/material'
 import { useParams } from 'react-router-dom'
-import { Footer, SimpleNavbar } from '../../components'
+import { Footer, SimpleNavbar, MetaProvider } from '../../components'
 import COURSE_DATA from '../course_details/CourseData'
-
 
 const Register = () => {
     useEffect(() => {
@@ -160,6 +159,7 @@ const Register = () => {
 
     return (
         <Box className='regsiter-container'>
+            <MetaProvider title='Register | QualifyPro' description='Register for the course' link={`register/${courseId}`} />
             <SimpleNavbar />
             <Box className='register-content'>
                 <Typography variant='h3' className='register-title'>Billing Details</Typography>

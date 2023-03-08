@@ -115,9 +115,9 @@
     flex-direction: column !important;
   }
   .client-postcode > div {
-    width: fill-available;
+    width: -webkit-fill-available;
   }
   .client-subject > div {
-    width: fill-available;
+    width: -webkit-fill-available;
   }
 }

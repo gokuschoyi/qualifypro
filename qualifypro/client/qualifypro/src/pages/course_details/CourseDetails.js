@@ -6,9 +6,13 @@ import COURSE_DATA from './CourseData'
 import CourseOne from '../../assets/course1.png'
 import CourseTwo from '../../assets/course2.jpg'
 import CourseThree from '../../assets/course3.jpg'
+import CourseFour from '../../assets/course4.jpg'
+import CourseFive from '../../assets/course5.jpg'
+import CourseSix from '../../assets/course6.jpeg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
 import KeyboardDoubleArrowUpOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowUpOutlined';
+import { MetaProvider } from '../../components'
 import { Footer } from '../../components'
 
 import { Box, Typography, Grid, CardMedia, Button, Divider, Card, CardContent, CardActions } from '@mui/material'
@@ -48,12 +52,16 @@ const CourseDetails = () => {
 
     return (
         <Box className='course-details-container'>
-            <CourseNavbar toggle={toggle} setToggle={setToggle} showNav={showNav}/>
+            <MetaProvider
+                title={`QualifyPro | ${data.title}`}
+                description={`Explore the various course offered by QualifyPro.`}
+                link={`courses/${courseId}`} />
+            <CourseNavbar toggle={toggle} setToggle={setToggle} showNav={showNav} />
             <Box className='course-details-content' onClick={(e) => setToggle(false)}>
                 <Box className='course-details-banner'>
                     <Typography variant='h1' color='white' fontWeight='400'>COURSE DETAILS</Typography>
-                    <Typography variant='h3' color='white' fontWeight='400' sx={{ textAlign: 'center' }}>{data.title}</Typography>
-                    <Typography variant='h5' color='white' fontWeight='400' sx={{ width: '80%', textAlign: 'center' }}>{data.description}</Typography>
+                    <Typography variant='h2' color='white' fontWeight='400' sx={{ textAlign: 'center' }}>{data.title}</Typography>
+                    <Typography variant='h3' color='white' fontWeight='400' sx={{ width: '80%', textAlign: 'center' }}>{data.description}</Typography>
                 </Box>
                 <Box className='course-info-box'>
                     <Grid container spacing={2}>
@@ -62,8 +70,10 @@ const CourseDetails = () => {
                                 <CardMedia
                                     sx={{ padding: '20px', height: '100%', width: '90%' }}
                                     component="img"
-                                    image={courseId === 'courseOne' ? CourseOne : '' || courseId === 'courseTwo' ? CourseTwo : '' || courseId === 'courseThree' ? CourseThree : ''}
+                                    image={courseId === 'courseOne' ? CourseOne : '' || courseId === 'courseTwo' ? CourseTwo : '' || courseId === 'courseThree' ? CourseThree : '' || courseId === 'courseFour' ? CourseFour : '' || courseId === 'courseFive' ? CourseFive : '' || courseId === 'courseSix' ? CourseSix : ''}
                                     title={`${data.courseId}`}
+                                    alt={`${data.courseId}`}
+                                    loading="lazy"
                                 />
                             </Box>
                             <Box className='course-link-box'>
@@ -247,8 +257,10 @@ const CourseDetails = () => {
                                                     <CardMedia
                                                         sx={{ height: 200 }}
                                                         component="img"
-                                                        image={course.courseId === 'courseOne' ? CourseOne : '' || course.courseId === 'courseTwo' ? CourseTwo : '' || course.courseId === 'courseThree' ? CourseThree : ''}
+                                                        image={course.courseId === 'courseOne' ? CourseOne : '' || course.courseId === 'courseTwo' ? CourseTwo : '' || course.courseId === 'courseThree' ? CourseThree : '' || course.courseId === 'courseFour' ? CourseFour : '' || course.courseId === 'courseFive' ? CourseFive : '' || course.courseId === 'courseSix' ? CourseSix : ''}
                                                         title="green iguana"
+                                                        alt={`${course.title}`}
+                                                        loading="lazy"
                                                     />
                                                     <CardContent>
                                                         <Typography gutterBottom variant="h5" component="div">

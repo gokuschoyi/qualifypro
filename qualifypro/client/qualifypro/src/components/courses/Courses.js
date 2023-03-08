@@ -3,6 +3,9 @@ import './Courses.css'
 import Course1 from '../../assets/course1.png'
 import Course2 from '../../assets/course2.jpg'
 import Course3 from '../../assets/course3.jpg'
+import Course4 from '../../assets/course4.jpg'
+import Course5 from '../../assets/course5.jpg'
+import Course6 from '../../assets/course6.jpeg'
 import Collapse from '@mui/material/Collapse';
 import { useNavigate } from 'react-router-dom'
 import { Box, Typography, Card, CardContent, CardActions, Button, Grid, CardMedia } from '@mui/material'
@@ -53,7 +56,9 @@ const Courses = () => {
                                     sx={{ height: 200 }}
                                     component="img"
                                     image={Course1}
-                                    title="green iguana"
+                                    title=" Diploma of Building and Construction"
+                                    alt='Diploma of Building and Construction'
+                                    loading='lazy'
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -90,7 +95,9 @@ const Courses = () => {
                                     sx={{ height: 200 }}
                                     component="img"
                                     image={Course2}
-                                    title="green iguana"
+                                    title="Certificate IV in Building & Construction (Building)"
+                                    alt='Certificate IV in Building & Construction (Building)'
+                                    loading='lazy'
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -127,7 +134,9 @@ const Courses = () => {
                                     sx={{ height: 200 }}
                                     component="img"
                                     image={Course3}
-                                    title="green iguana"
+                                    title="Certificate III Work Health & Safety"
+                                    alt='Certificate III Work Health & Safety'
+                                    loading='lazy'
                                 />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
@@ -168,12 +177,14 @@ const Courses = () => {
                                         <CardMedia
                                             sx={{ height: 200 }}
                                             component="img"
-                                            image={Course1}
-                                            title="green iguana"
+                                            image={Course4}
+                                            title="Builder Registration Program (Domestic & Commercial)"
+                                            alt='Builder Registration Program (Domestic & Commercial)'
+                                            loading='lazy'
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Diploma of Building and Construction
+                                                Builder Registration Program (Domestic & Commercial)
                                             </Typography>
                                             <Typography variant="body1" color="text.secondary">
                                                 Course Duration: Typically 12 to 24 months full-time or part-time equivalent
@@ -205,12 +216,14 @@ const Courses = () => {
                                         <CardMedia
                                             sx={{ height: 200 }}
                                             component="img"
-                                            image={Course2}
-                                            title="green iguana"
+                                            image={Course5}
+                                            title="Building Permit Applications"
+                                            alt='Building Permit Applications'
+                                            loading='lazy'
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Certificate IV in Building & Construction (Building)
+                                                Building Permit Applications
                                             </Typography>
                                             <Typography variant="body1" color="text.secondary">
                                                 Course Duration: Typically 12 to 24 months full-time or part-time equivalent
@@ -242,12 +255,14 @@ const Courses = () => {
                                         <CardMedia
                                             sx={{ height: 200 }}
                                             component="img"
-                                            image={Course3}
-                                            title="green iguana"
+                                            image={Course6}
+                                            title="Free – Infection Control (Building & Construction)"
+                                            alt='Free – Infection Control (Building & Construction)'
+                                            loading='lazy'
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
-                                                Certificate III Work Health & Safety
+                                                Free – Infection Control (Building & Construction)
                                             </Typography>
                                             <Typography variant="body1" color="text.secondary">
                                                 Typically 6 to 12 months full-time or part-time equivalent
@@ -279,7 +294,7 @@ const Courses = () => {
 
                 <Box display='flex' justifyContent='center'>
                     <Button onClick={handleShowMore} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                        marginTop:'25px',
+                        marginTop: '25px',
                         ':hover': {
                             color: 'white !important',
                             backgroundColor: '#f76e39 !important',

@@ -2,9 +2,14 @@ import React from 'react'
 import './TermsAndConditions.css'
 import { SimpleNavbar, Footer } from '../../components'
 import { Box } from '@mui/material'
+import { MetaProvider } from '../../components'
 const TermsAndConditions = () => {
     return (
         <Box>
+            <MetaProvider
+                title='Terms and Conditions | QualifyPro'
+                description='By using our website, you agree to our terms and conditions. Learn about our policies regarding user conduct, intellectual property, and more. Read our terms here.'
+                link='terms-and-conditions' />
             <SimpleNavbar />
             <Box className='terms-and-conditions-container'>
                 <Box className='inner-spacing'>

@@ -94,8 +94,8 @@ const ContactUs = () => {
                             </Box>
                             <Divider className='divider' />
                             <Box className='social-icon-box'>
-                                <img src={Instagram} alt='customize' className='social-icon' />
-                                <img src={Facebook} alt='customize' className='social-icon' />
+                                <img src={Instagram} alt='instagram' title='instagram' loading='lazy' className='social-icon' />
+                                <img src={Facebook} alt='facebook'  title='facebook' loading='lazy' className='social-icon' />
                             </Box>
                         </Box>
                     </Card>

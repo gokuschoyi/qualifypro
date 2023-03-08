@@ -2,9 +2,14 @@ import React from 'react'
 import { SimpleNavbar, Footer } from '../../components'
 import { Box } from '@mui/material'
 import './Refund.css'
+import {MetaProvider} from '../../components'
 const Refund = () => {
     return (
         <Box>
+            <MetaProvider 
+            title="Refund Policy | QualifyPro" 
+            description="Need to return a product? Our refund policy ensures you have a hassle-free experience. Learn about our return process and eligibility requirements here." 
+            link="refund-policy" />
             <SimpleNavbar />
             <Box className='refund-container'>
                 <Box className='inner-spacing'>

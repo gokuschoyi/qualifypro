@@ -9,6 +9,7 @@ import Footer from "./footer/Footer";
 import Particle from "./particle/Particle";
 import SimpleNavbar from "./simple-navbar/SimpleNavbar";
 import SideContact from "./side-contact/SideContact";
+import MetaProvider from "./meta-provider/MetaProvider";
 
 export {
     Navbar,
@@ -21,5 +22,6 @@ export {
     Footer,
     Particle,
     SimpleNavbar,
-    SideContact
+    SideContact,
+    MetaProvider,
 };

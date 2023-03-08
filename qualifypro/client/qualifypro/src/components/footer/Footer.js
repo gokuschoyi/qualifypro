@@ -95,8 +95,8 @@ const Footer = () => {
                 </Box>
                 <Box className='column-four'>
                     <Box className='social-icon-footer'>
-                        <img src={Instagram} alt='customize' className='footer-social-icon' />
-                        <img src={Facebook} alt='customize' className='footer-social-icon' />
+                        <img src={Instagram} alt='instagram' title='instagram' loading="lazy" className='footer-social-icon' />
+                        <img src={Facebook} alt='facebook' title='facebook' loading="lazy" className='footer-social-icon' />
                     </Box>
                 </Box>
             </Box>

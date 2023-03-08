@@ -50,7 +50,7 @@ const CourseNavbar = (props) => {
     return (
         <Box className='navbar-container'>
             <Box className='navbar-logo'>
-                <HashLink className='logo' to='/#home'>QualifyPro</HashLink>
+                <HashLink className='logo' to='/#courses'>QualifyPro</HashLink>
             </Box>
             <Box className='navbar-links'>
                 <ul className='navigation-li-links'>

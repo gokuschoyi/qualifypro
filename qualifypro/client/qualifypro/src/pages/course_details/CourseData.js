@@ -147,7 +147,7 @@ const COURSE_DATA = {
             course_fee:4000,
         },
         courseFour: {
-            title:'Certificate III Work Health & Safety',
+            title:'Builder Registration Program (Domestic & Commercial)',
             courseId:'courseFour',
             description:'The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
             learning_points: [
@@ -196,7 +196,7 @@ const COURSE_DATA = {
             course_fee:10000,
         },
         courseFive: {
-            title:'Certificate III Work Health & Safety',
+            title:'Building Permit Applications',
             courseId:'courseFive',
             description:'The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
             learning_points: [
@@ -245,7 +245,7 @@ const COURSE_DATA = {
             course_fee:15000,
         },
         courseSix: {
-            title:'Certificate III Work Health & Safety',
+            title:'Free – Infection Control (Building & Construction)',
             courseId:'courseSix',
             description:'The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
             learning_points: [
@@ -293,7 +293,6 @@ const COURSE_DATA = {
             instructor:'Jhon Doe',
             course_fee:20000,
         }
-
     }
 
 export default COURSE_DATA

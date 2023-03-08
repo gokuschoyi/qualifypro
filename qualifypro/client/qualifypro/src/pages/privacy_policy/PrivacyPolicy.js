@@ -2,9 +2,14 @@ import React from 'react'
 import './PrivacyPolicy.css'
 import { SimpleNavbar, Footer } from '../../components'
 import { Box } from '@mui/material'
+import { MetaProvider } from '../../components'
 const PrivacyPolicy = () => {
     return (
         <Box>
+            <MetaProvider
+                title="Privacy Policy | QualifyPro"
+                description="Learn how we collect, use, and protect your personal info. Our privacy policy outlines our commitment to keeping your data safe. Read more here."
+                link="privacy-policy" />
             <SimpleNavbar />
             <Box className='privacy-policy-container'>
                 <Box className='inner-spacing'>

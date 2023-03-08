@@ -45,7 +45,7 @@ const Review = () => {
                         <Card sx={{ width: '80%', boxShadow: 8 }} className='review-card'>
                             <Box display='flex' flexDirection='column' gap='0.3rem'>
                                 <Box display='flex' flexDirection='row' sx={{ gap: '1rem' }}>
-                                    <img src={User} alt='reviewer' className='reviewer-image' />
+                                    <img src={User} alt='reviewer' title='reviewer' loading='lazy' className='reviewer-image' />
                                     <Box display='flex' flexDirection='column' justifyContent='center'>
                                         <Typography variant='body1' className='reviewer-name'>Ricky Males</Typography>
                                         <Typography variant='body1' className='reviewer-position'>23-04-2022</Typography>
@@ -63,7 +63,7 @@ const Review = () => {
                         <Card sx={{ width: '80%', boxShadow: 8 }} className='review-card'>
                             <Box display='flex' flexDirection='column' gap='0.3rem'>
                                 <Box display='flex' flexDirection='row' sx={{ gap: '1rem' }}>
-                                    <img src={User} alt='reviewer' className='reviewer-image' />
+                                    <img src={User} alt='reviewer' title='reviewer' loading='lazy' className='reviewer-image' />
                                     <Box display='flex' flexDirection='column' justifyContent='center'>
                                         <Typography variant='body1' className='reviewer-name'>Ricky Males</Typography>
                                         <Typography variant='body1' className='reviewer-position'>23-04-2022</Typography>
@@ -81,7 +81,7 @@ const Review = () => {
                         <Card sx={{ width: '80%', boxShadow: 8 }} className='review-card'>
                             <Box display='flex' flexDirection='column' gap='0.3rem'>
                                 <Box display='flex' flexDirection='row' sx={{ gap: '1rem' }}>
-                                    <img src={User} alt='reviewer' className='reviewer-image' />
+                                    <img src={User} alt='reviewer' title='reviewer' loading='lazy' className='reviewer-image' />
                                     <Box display='flex' flexDirection='column' justifyContent='center'>
                                         <Typography variant='body1' className='reviewer-name'>Ricky Males</Typography>
                                         <Typography variant='body1' className='reviewer-position'>23-04-2022</Typography>
@@ -99,7 +99,7 @@ const Review = () => {
                         <Card sx={{ width: '80%', boxShadow: 8 }} className='review-card'>
                             <Box display='flex' flexDirection='column' gap='0.3rem'>
                                 <Box display='flex' flexDirection='row' sx={{ gap: '1rem' }}>
-                                    <img src={User} alt='reviewer' className='reviewer-image' />
+                                    <img src={User} alt='reviewer' title='reviewer' loading='lazy' className='reviewer-image' />
                                     <Box display='flex' flexDirection='column' justifyContent='center'>
                                         <Typography variant='body1' className='reviewer-name'>Ricky Males</Typography>
                                         <Typography variant='body1' className='reviewer-position'>23-04-2022</Typography>
