@@ -11,6 +11,7 @@
     padding:1rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
+    cursor: context-menu;
 }
 
 .client-details-box{

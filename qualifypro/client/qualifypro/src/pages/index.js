@@ -6,6 +6,7 @@ import Refund from "./refund/Refund";
 import Register from "./register/Register";
 import PaymentSuccess from "./payment_success/PaymentSuccess";
 import PaymentCancel from "./payment_cancel/PaymentCancel";
+import COURSE_DATA from "./course_details/CourseData";
 
 export {
     LandingPage,
@@ -15,5 +16,6 @@ export {
     Refund,
     Register,
     PaymentSuccess,
-    PaymentCancel
+    PaymentCancel,
+    COURSE_DATA
 }

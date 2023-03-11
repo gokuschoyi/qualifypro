@@ -1,5 +1,5 @@
 .faq-container{
-    min-height: 100vh;
+    height: 100vh;
     position:relative;
     z-index: 9;
     background-color: #ffffff;
@@ -20,11 +20,12 @@
 .faq-accordian-details{
     background-color: #1098F7 !important;
     opacity:80%;
-    color : white !important;
+    color : black !important;
 }
 
 .accordian-title{
     width: 70% !important;
+    color:black !important;
 }
 
 @keyframes inAnimationFaq {

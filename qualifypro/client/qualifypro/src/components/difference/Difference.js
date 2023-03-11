@@ -37,10 +37,9 @@ const Difference = () => {
                             <CardContent className='card-split'>
                                 <Box className='d-card-box'>
                                     <img src={d1} alt='Customized Services' title='customized service' loading='lazy' className='difference-icon' />
-                                    <Typography variant='h5'>Customized Services</Typography>
+                                    <Typography variant='h5' className='difference-hover-underline-animation'>Customized Services</Typography>
                                 </Box>
-                                <Typography className='lower-typo' variant='body2'>Customized services for local builders and contractors for a personalized experienc
-                                    e.
+                                <Typography className='lower-typo' variant='body2'>Customized services for local builders and contractors for a personalized experience.
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -50,7 +49,7 @@ const Difference = () => {
                             <CardContent className='card-split'>
                                 <Box className='d-card-box'>
                                     <img src={d2} alt='Up-to-date Information' title='Up to date information' loading='lazy' className='difference-icon' />
-                                    <Typography variant='h5'>Up-to-date Information</Typography>
+                                    <Typography variant='h5' className='difference-hover-underline-animation'>Up-to-date Information</Typography>
                                 </Box>
                                 <Typography className='lower-typo' variant='body2'>Latest and relevant information for users.
                                 </Typography>
@@ -62,7 +61,7 @@ const Difference = () => {
                             <CardContent className='card-split'>
                                 <Box className='d-card-box'>
                                     <img src={d3} alt='Flexible scheduling' title='Flexible scheduling' loading='lazy' className='difference-icon' />
-                                    <Typography variant='h5'>Flexible scheduling</Typography>
+                                    <Typography variant='h5' className='difference-hover-underline-animation'>Flexible scheduling</Typography>
                                 </Box>
                                 <Typography className='lower-typo' variant='body2'>Flexible scheduling for busy builders and contractors to obtain credentials.</Typography>
                             </CardContent>
@@ -73,7 +72,7 @@ const Difference = () => {
                             <CardContent className='card-split'>
                                 <Box className='d-card-box'>
                                     <img src={d4} alt='Experienced instructors' title='Experienced instructors' loading='lazy' className='difference-icon' />
-                                    <Typography variant='h5'>Experienced instructors</Typography>
+                                    <Typography variant='h5' className='difference-hover-underline-animation'>Experienced instructors</Typography>
                                 </Box>
                                 <Typography className='lower-typo' variant='body2'>Experienced and knowledgeable instructors for hands-on learning</Typography>
                             </CardContent>

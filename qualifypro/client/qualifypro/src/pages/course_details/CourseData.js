@@ -51,7 +51,7 @@ const COURSE_DATA = {
         courseTwo: {
             title:'Certificate IV in Building & Construction (Building)',
             courseId:'courseTwo',
-            description:'The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
+            description:'Certificate IV in Building & Construction (Building) is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
             learning_points: [
                 'Construction technology and materials: Students learn about the latest construction technology, including emerging trends in materials, tools, and equipment. They also learn about the best practices for selecting, sourcing, and managing materials on a construction site.',
                 'Building codes and standards: The course covers the national and state-specific building codes and regulations that govern construction projects. This includes topics such as building design, structural integrity, fire safety, and environmental regulations.',
@@ -100,7 +100,7 @@ const COURSE_DATA = {
         courseThree: {
             title:'Certificate III Work Health & Safety',
             courseId:'courseThree',
-            description:'The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
+            description:'Certificate III Work Health & Safety is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.',
             learning_points: [
                 'Construction technology and materials: Students learn about the latest construction technology, including emerging trends in materials, tools, and equipment. They also learn about the best practices for selecting, sourcing, and managing materials on a construction site.',
                 'Building codes and standards: The course covers the national and state-specific building codes and regulations that govern construction projects. This includes topics such as building design, structural integrity, fire safety, and environmental regulations.',

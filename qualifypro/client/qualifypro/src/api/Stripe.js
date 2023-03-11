@@ -6,3 +6,10 @@ export const getSessionId = async (data) => {
         withCredentials: false
     })
 }
+
+export const getClientDetails = async (data) => {
+    const baseUrl = process.env.REACT_APP_BASEURL;
+    return axios.post(`${baseUrl}/getSessionDetails`, data, {
+        withCredentials: false
+    })
+}

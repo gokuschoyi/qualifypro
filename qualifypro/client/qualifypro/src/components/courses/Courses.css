@@ -18,6 +18,11 @@
 
 .card-container {
   display: flex;
+  
+  justify-content: space-between;
+}
+.card-container-inner{
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }

@@ -8,17 +8,23 @@ const createCheckoutSession = async (req, res) => {
     if (!line_items || !email) {
         return res.status(400).json({ error: 'Missing parameters' });
     }
-    console.log(clientdata)
+    
     let session;
     try {
         session = await stripeApi.checkout.sessions.create({
             payment_method_types: ['card'],
             mode: 'payment',
             line_items,
+            invoice_creation:{
+                enabled: true,
+            },
             customer_email: email,
-            success_url: `${domainUrl}/payment_success?session_id={CHECKOUT_SESSION_ID}`,
+            success_url: `${domainUrl}/payment_success/{CHECKOUT_SESSION_ID}`,
             cancel_url: `${domainUrl}/payment_cancel`,
-            shipping_address_collection: { allowed_countries: ['AU'] }
+            shipping_address_collection: { allowed_countries: ['AU'] },
+            phone_number_collection: {
+                enabled: true,
+            },
         });
         res.status(200).json({ id: session.id });
     } catch (error) {

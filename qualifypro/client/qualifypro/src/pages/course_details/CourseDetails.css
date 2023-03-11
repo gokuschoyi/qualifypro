@@ -3,10 +3,18 @@
 }
 .course-details-content {
   padding-top: 72px;
+  background-color: #ebebeb;
+  cursor: context-menu;
 }
 
-.course-details-content {
-  background-color: #ebebeb;
+.all-course-details-banner{
+  background-color: #4d48ff;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .course-details-banner {
@@ -225,5 +233,8 @@
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+  }
+  .all-course-details-banner{
+    text-align: center;
   }
 }

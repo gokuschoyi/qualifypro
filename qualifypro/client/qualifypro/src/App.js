@@ -29,9 +29,9 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route index element={<LandingPage />} />
-              <Route path='/courses/:courseId' element={<CourseDetails />} />
+              <Route path='/courses/:courseId?' element={<CourseDetails />} />
               <Route path='/register/:courseId' element={<Register />} />
-              <Route path='/payment_success' element={<PaymentSuccess />} />
+              <Route path='/payment_success/:session_id' element={<PaymentSuccess />} />
               <Route path='/payment_cancel' element={<PaymentCancel />} />
               <Route path='/privacy-policy' element={<PrivacyPolicy />} />
               <Route path='/terms-and-conditions' element={<TermsAndConditions />} />

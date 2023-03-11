@@ -25,6 +25,33 @@
   transform: scale(1.1);
 }
 
+.navbar-hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+  
+}
+
+.navbar-hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  margin-top: 4px;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .navbar-links {
   display: flex;
   flex-direction: row;

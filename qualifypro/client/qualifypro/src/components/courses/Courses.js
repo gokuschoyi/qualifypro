@@ -8,6 +8,7 @@ import Course5 from '../../assets/course5.jpg'
 import Course6 from '../../assets/course6.jpeg'
 import Collapse from '@mui/material/Collapse';
 import { useNavigate } from 'react-router-dom'
+import { COURSE_DATA } from '../../pages'
 import { Box, Typography, Card, CardContent, CardActions, Button, Grid, CardMedia } from '@mui/material'
 
 const Courses = () => {
@@ -15,8 +16,26 @@ const Courses = () => {
     const handleShowMore = () => {
         setShowMore((prev) => !prev)
     }
-    // console.log(showMore)
     const navigate = useNavigate()
+
+    const courseDataKeys = Object.keys(COURSE_DATA)
+    const totalCourse = courseDataKeys.length;
+
+    const firstHalfOfCourse = {}
+    const secondHalfOfCourse = {}
+
+    if (totalCourse > 3) {
+        courseDataKeys.slice(0, 3).forEach((key) => {
+            firstHalfOfCourse[key] = COURSE_DATA[key]
+        });
+        courseDataKeys.slice(3).forEach((key) => {
+            secondHalfOfCourse[key] = COURSE_DATA[key]
+        });
+    } else {
+        courseDataKeys.forEach((key) => {
+            firstHalfOfCourse[key] = COURSE_DATA[key]
+        });
+    }
 
     const showCourseDetails = (e) => {
         const { value } = e.target
@@ -49,245 +68,97 @@ const Courses = () => {
 
             <Box className='course-box'>
                 <Grid container spacing={2} sx={{ marginTop: '20px', marginBottom: '20px' }}>
-                    <Grid item xs={12} sm={6} md={4} className='course-card'>
-                        <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                            <Box>
-                                <CardMedia
-                                    sx={{ height: 200 }}
-                                    component="img"
-                                    image={Course1}
-                                    title=" Diploma of Building and Construction"
-                                    alt='Diploma of Building and Construction'
-                                    loading='lazy'
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Diploma of Building and Construction
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary">
-                                        Course Duration: Typically 12 to 24 months full-time or part-time equivalent
-                                    </Typography>
-                                    <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                        The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.
-                                    </Typography>
-                                </CardContent>
-                            </Box>
-                            <CardActions className='action-button'>
-                                <Button onClick={(e) => showCourseDetails(e)} value='courseOne' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }} >MORE</Button>
-                                <Button size="small" onClick={(e) => registerCourse(e)} value='courseOne' variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }}>REGISTER</Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={4} className='course-card'>
-                        <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                            <Box>
-                                <CardMedia
-                                    sx={{ height: 200 }}
-                                    component="img"
-                                    image={Course2}
-                                    title="Certificate IV in Building & Construction (Building)"
-                                    alt='Certificate IV in Building & Construction (Building)'
-                                    loading='lazy'
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Certificate IV in Building & Construction (Building)
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary">
-                                        Course Duration: Typically 12 to 24 months full-time or part-time equivalent
-                                    </Typography>
-                                    <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                        The Certificate IV in Building and Construction (Building) is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.
-                                    </Typography>
-                                </CardContent>
-                            </Box>
-                            <CardActions>
-                                <Button onClick={(e) => showCourseDetails(e)} value='courseTwo' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }} >MORE</Button>
-                                <Button onClick={(e) => registerCourse(e)} value='courseTwo' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }}>REGISTER</Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={4} className='course-card'>
-                        <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                            <Box>
-                                <CardMedia
-                                    sx={{ height: 200 }}
-                                    component="img"
-                                    image={Course3}
-                                    title="Certificate III Work Health & Safety"
-                                    alt='Certificate III Work Health & Safety'
-                                    loading='lazy'
-                                />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        Certificate III Work Health & Safety
-                                    </Typography>
-                                    <Typography variant="body1" color="text.secondary">
-                                        Typically 6 to 12 months full-time or part-time equivalent
-                                    </Typography>
-                                    <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                        The Certificate III in Work Health and Safety is designed to provide individuals with the knowledge and skills required to work in a range of work health and safety roles. The course covers the key principles of work health and safety, including hazard identification and control, risk management, workplace emergency procedures, workplace health and safety legislation and codes of practice, and the implementation of WHS policies and procedures.
-                                    </Typography>
-                                </CardContent>
-                            </Box>
-                            <CardActions>
-                                <Button onClick={(e) => showCourseDetails(e)} value='courseThree' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }} >MORE</Button>
-                                <Button onClick={(e) => registerCourse(e)} value='courseThree' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                    ':hover': {
-                                        color: 'white !important',
-                                        backgroundColor: '#f76e39 !important',
-                                    },
-                                }}>REGISTER</Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                    {firstHalfOfCourse && Object.keys(firstHalfOfCourse).map((key) => {
+                        return (
+                            <Grid key={key} item xs={12} sm={6} md={4} className='course-card'>
+                                <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
+                                    <Box display='flex' flexDirection='column' justifyContent='space-between'>
+                                        <CardMedia
+                                            sx={{ height: 200 }}
+                                            component="img"
+                                            image={firstHalfOfCourse[key].courseId === 'courseOne' ? Course1 : '' || firstHalfOfCourse[key].courseId === 'courseTwo' ? Course2 : '' || firstHalfOfCourse[key].courseId === 'courseThree' ? Course3 : ''}
+                                            title={firstHalfOfCourse[key].title}
+                                            alt={firstHalfOfCourse[key].title}
+                                            loading='lazy'
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {firstHalfOfCourse[key].title}
+                                            </Typography>
+                                            <Typography variant="body1" color="text.secondary">
+                                                {firstHalfOfCourse[key].duration}
+                                            </Typography>
+                                            <Typography className='course-descritpion' variant="body2" color="text.secondary">
+                                                {firstHalfOfCourse[key].description}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions className='action-button'>
+                                            <Button onClick={(e) => showCourseDetails(e)} value={`${firstHalfOfCourse[key].courseId}`} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                                ':hover': {
+                                                    color: 'white !important',
+                                                    backgroundColor: '#f76e39 !important',
+                                                },
+                                            }} >MORE</Button>
+                                            <Button size="small" onClick={(e) => registerCourse(e)} value={`${firstHalfOfCourse[key].courseId}`} variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                                ':hover': {
+                                                    color: 'white !important',
+                                                    backgroundColor: '#f76e39 !important',
+                                                },
+                                            }}>REGISTER</Button>
+                                        </CardActions>
+                                    </Box>
+                                </Card>
+                            </Grid>
+                        )
+                    })}
                 </Grid>
 
                 <Collapse in={showMore}>
                     <Box className='hidden-courses'>
                         <Grid container spacing={2} sx={{ marginTop: '2px', marginBottom: '20px' }}>
-                            <Grid item xs={12} sm={6} md={4} className='course-card'>
-                                <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                                    <Box>
-                                        <CardMedia
-                                            sx={{ height: 200 }}
-                                            component="img"
-                                            image={Course4}
-                                            title="Builder Registration Program (Domestic & Commercial)"
-                                            alt='Builder Registration Program (Domestic & Commercial)'
-                                            loading='lazy'
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Builder Registration Program (Domestic & Commercial)
-                                            </Typography>
-                                            <Typography variant="body1" color="text.secondary">
-                                                Course Duration: Typically 12 to 24 months full-time or part-time equivalent
-                                            </Typography>
-                                            <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                                The Diploma of Building and Construction is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.
-                                            </Typography>
-                                        </CardContent>
-                                    </Box>
-                                    <CardActions className='action-button'>
-                                        <Button onClick={(e) => showCourseDetails(e)} value='courseFour' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }} >MORE</Button>
-                                        <Button onClick={(e) => registerCourse(e)} value='courseFour' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }}>REGISTER</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={4} className='course-card'>
-                                <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                                    <Box>
-                                        <CardMedia
-                                            sx={{ height: 200 }}
-                                            component="img"
-                                            image={Course5}
-                                            title="Building Permit Applications"
-                                            alt='Building Permit Applications'
-                                            loading='lazy'
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Building Permit Applications
-                                            </Typography>
-                                            <Typography variant="body1" color="text.secondary">
-                                                Course Duration: Typically 12 to 24 months full-time or part-time equivalent
-                                            </Typography>
-                                            <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                                The Certificate IV in Building and Construction (Building) is designed for individuals who want to develop their skills and knowledge in the construction industry, and to progress their career in building and construction. The course covers the key principles of building and construction, including project management, planning and scheduling, procurement, cost management, contract administration, building codes and standards, and workplace health and safety.
-                                            </Typography>
-                                        </CardContent>
-                                    </Box>
-                                    <CardActions>
-                                        <Button onClick={(e) => showCourseDetails(e)} value='courseFive' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }} >MORE</Button>
-                                        <Button onClick={(e) => registerCourse(e)} value='courseFive' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }}>REGISTER</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                            <Grid item xs={12} sm={6} md={4} className='course-card'>
-                                <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
-                                    <Box>
-                                        <CardMedia
-                                            sx={{ height: 200 }}
-                                            component="img"
-                                            image={Course6}
-                                            title="Free – Infection Control (Building & Construction)"
-                                            alt='Free – Infection Control (Building & Construction)'
-                                            loading='lazy'
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Free – Infection Control (Building & Construction)
-                                            </Typography>
-                                            <Typography variant="body1" color="text.secondary">
-                                                Typically 6 to 12 months full-time or part-time equivalent
-                                            </Typography>
-                                            <Typography className='course-descritpion' variant="body2" color="text.secondary">
-                                                The Certificate III in Work Health and Safety is designed to provide individuals with the knowledge and skills required to work in a range of work health and safety roles. The course covers the key principles of work health and safety, including hazard identification and control, risk management, workplace emergency procedures, workplace health and safety legislation and codes of practice, and the implementation of WHS policies and procedures.
-                                            </Typography>
-                                        </CardContent>
-                                    </Box>
-                                    <CardActions>
-                                        <Button onClick={(e) => showCourseDetails(e)} value='courseSix' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }} >MORE</Button>
-                                        <Button onClick={(e) => registerCourse(e)} value='courseSix' size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
-                                            ':hover': {
-                                                color: 'white !important',
-                                                backgroundColor: '#f76e39 !important',
-                                            },
-                                        }}>REGISTER</Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
+                            {secondHalfOfCourse && Object.keys(secondHalfOfCourse).map((key) => {
+                                return (
+                                    <Grid key={key} item xs={12} sm={6} md={4} className='course-card'>
+                                        <Card sx={{ width: 345, boxShadow: 10 }} className='card-container'>
+                                            <Box display='flex' flexDirection='column' justifyContent='space-between'>
+                                                <CardMedia
+                                                    sx={{ height: 200 }}
+                                                    component="img"
+                                                    image={secondHalfOfCourse[key].courseId === 'courseFour' ? Course4 : '' || secondHalfOfCourse[key].courseId === 'courseFive' ? Course5 : '' || secondHalfOfCourse[key].courseId === 'courseSix' ? Course6 : ''}
+                                                    title={secondHalfOfCourse[key].title}
+                                                    alt={secondHalfOfCourse[key].title}
+                                                    loading='lazy'
+                                                />
+                                                <CardContent>
+                                                    <Typography gutterBottom variant="h5" component="div">
+                                                        {secondHalfOfCourse[key].title}
+                                                    </Typography>
+                                                    <Typography variant="body1" color="text.secondary">
+                                                        {secondHalfOfCourse[key].duration}
+                                                    </Typography>
+                                                    <Typography className='course-descritpion' variant="body2" color="text.secondary">
+                                                        {secondHalfOfCourse[key].description}
+                                                    </Typography>
+                                                </CardContent>
+                                                <CardActions className='action-button'>
+                                                    <Button onClick={(e) => showCourseDetails(e)} value={`${secondHalfOfCourse[key].courseId}`} size="small" variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                                        ':hover': {
+                                                            color: 'white !important',
+                                                            backgroundColor: '#f76e39 !important',
+                                                        },
+                                                    }} >MORE</Button>
+                                                    <Button size="small" onClick={(e) => registerCourse(e)} value={`${secondHalfOfCourse[key].courseId}`} variant="text" style={{ color: `white`, backgroundColor: '#03a9f4' }} sx={{
+                                                        ':hover': {
+                                                            color: 'white !important',
+                                                            backgroundColor: '#f76e39 !important',
+                                                        },
+                                                    }}>REGISTER</Button>
+                                                </CardActions>
+                                            </Box>
+                                        </Card>
+                                    </Grid>
+                                )
+                            })}
                         </Grid>
                     </Box>
                 </Collapse>

@@ -49,16 +49,16 @@ const Navbar = (props) => {
                 <a className='logo' href='#home'>QualifyPro</a>
             </Box>
             <Box className='navbar-links'>
-                <a href='#home' className='nav-link'>HOME</a>
-                <a href='#aboutus' className='nav-link'>ABOUT US</a>
-                <a href='#courses' className='nav-link'>COURSES</a>
-                <a href='#faq' className='nav-link'>F.A.Q</a>
-                <a href='#contactus' className='nav-link'>CONTACT US</a>
-                <a href='#reviews' className='nav-link'>REVIEWS</a>
+                <a href='#home' className='nav-link navbar-hover-underline-animation'>HOME</a>
+                <a href='#aboutus' className='nav-link navbar-hover-underline-animation'>ABOUT US</a>
+                <a href='#courses' className='nav-link navbar-hover-underline-animation'>COURSES</a>
+                <a href='#faq' className='nav-link navbar-hover-underline-animation'>F.A.Q</a>
+                <a href='#contactus' className='nav-link navbar-hover-underline-animation'>CONTACT US</a>
+                <a href='#reviews' className='nav-link navbar-hover-underline-animation'>REVIEWS</a>
             </Box>
             <Box className='getstarted-hamburger'>
                 <Box className='get-started'>
-                    <a href='getstarted' className='get-started-link'>GET STARTED</a>
+                    <a href='/courses' className='get-started-link'>GET STARTED</a>
                 </Box>
                 {md &&
                     <Box className="hamburger-icon" mr={2}>

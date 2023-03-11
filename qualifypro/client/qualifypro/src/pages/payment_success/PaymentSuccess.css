@@ -1,0 +1,16 @@
+.payment-success{
+    height:100vh;
+}
+
+.payment-success-content{
+    width: auto;
+    /* height:100%; */
+    
+}
+
+.invoice-download-buttons{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    margin-top: 4rem;
+}

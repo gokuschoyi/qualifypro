@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Banner.css'
 import { Particle } from '../../components'
 import BannerImage from '../../assets/bannerPic.jpg'
 import { Box, Grid, Button, Typography } from '@mui/material'
 const Banner = () => {
+    const navigate = useNavigate()
     return (
         <Box id='home' className='banner-container'>
             {/* <Particle /> */} {/* This is the particle effect */}
@@ -18,7 +20,7 @@ const Banner = () => {
                             The ultimate destination for builders and contractors in Victoria, Australia. Get access to a wide range of services and resources to help you succeed in your building and construction projects. From license applications to renewal services, we have got you covered. Register now and join our community of registered builders and contractors. Building a better future, together!
                         </Typography>
                         <Box className='button-group'>
-                            <Button size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#399ff7', marginRight: '20px' }} sx={{
+                            <Button onClick={() => navigate('/courses')} size="small" variant="text" style={{ fontSize: '14px', color: `white`, backgroundColor: '#399ff7', marginRight: '20px' }} sx={{
                                 ':hover': {
                                     color: 'white !important',
                                     backgroundColor: '#f76e39 !important',
@@ -39,7 +41,7 @@ const Banner = () => {
                     </Box>
                 </Grid>
             </Grid>
-        </Box>
+        </Box >
     )
 }
 

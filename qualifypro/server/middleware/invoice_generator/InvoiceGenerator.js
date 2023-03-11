@@ -2,7 +2,7 @@ var fs = require('fs')
 const path = require('path');
 const { generate, BLANK_PDF } = require('@pdfme/generator');
 
-const generateInvoice = async (req, res, next) => {
+const generateInvoice = async (pdfData) => {
 
     const fontArrayBuffer = fs.readFileSync('fonts/MontserratRegular.ttf').buffer;
 
@@ -59,7 +59,7 @@ const generateInvoice = async (req, res, next) => {
                 "InvoiceDate": {
                     "type": "text",
                     "position": {
-                        "x": 103.94,
+                        "x": 100.94,
                         "y": 36.54
                     },
                     "width": 40.23,
@@ -72,7 +72,7 @@ const generateInvoice = async (req, res, next) => {
                 "Idate": {
                     "type": "text",
                     "position": {
-                        "x": 103.92,
+                        "x": 100.92,
                         "y": 42.79
                     },
                     "width": 46.1,
@@ -85,7 +85,7 @@ const generateInvoice = async (req, res, next) => {
                 "InvoiceNumber": {
                     "type": "text",
                     "position": {
-                        "x": 103.95,
+                        "x": 100.95,
                         "y": 54.44
                     },
                     "width": 46.11,
@@ -98,20 +98,20 @@ const generateInvoice = async (req, res, next) => {
                 "Inumber": {
                     "type": "text",
                     "position": {
-                        "x": 103.96,
+                        "x": 100.96,
                         "y": 61.68
                     },
                     "width": 46.11,
                     "height": 6.2,
                     "alignment": "left",
-                    "fontSize": 11,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
                 "Abn": {
                     "type": "text",
                     "position": {
-                        "x": 103.96,
+                        "x": 100.96,
                         "y": 73.49
                     },
                     "width": 16.74,
@@ -124,7 +124,7 @@ const generateInvoice = async (req, res, next) => {
                 "abnNumber": {
                     "type": "text",
                     "position": {
-                        "x": 103.93,
+                        "x": 100.93,
                         "y": 80.21
                     },
                     "width": 46.11,
@@ -191,7 +191,7 @@ const generateInvoice = async (req, res, next) => {
                 "Unitprice": {
                     "type": "text",
                     "position": {
-                        "x": 103.96,
+                        "x": 107.96,
                         "y": 109.56
                     },
                     "width": 26.27,
@@ -236,7 +236,7 @@ const generateInvoice = async (req, res, next) => {
                     "width": 68.07,
                     "height": 13.6,
                     "alignment": "left",
-                    "fontSize": 13,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
@@ -249,20 +249,20 @@ const generateInvoice = async (req, res, next) => {
                     "width": 26,
                     "height": 6.2,
                     "alignment": "right",
-                    "fontSize": 13,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
                 "unitPriceValue": {
                     "type": "text",
                     "position": {
-                        "x": 103.92,
+                        "x": 107.92,
                         "y": 121.67
                     },
                     "width": 26,
                     "height": 6.2,
                     "alignment": "right",
-                    "fontSize": 13,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
@@ -275,7 +275,7 @@ const generateInvoice = async (req, res, next) => {
                     "width": 20.19,
                     "height": 6.2,
                     "alignment": "right",
-                    "fontSize": 13,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
@@ -288,7 +288,7 @@ const generateInvoice = async (req, res, next) => {
                     "width": 50.08,
                     "height": 6.2,
                     "alignment": "right",
-                    "fontSize": 13,
+                    "fontSize": 9,
                     "characterSpacing": 0,
                     "lineHeight": 1
                 },
@@ -549,21 +549,22 @@ const generateInvoice = async (req, res, next) => {
             "website": "qualifypro.com\n"
         }
     ];
-    
-    inputs[0].clientName = 'Gokul S Choyi'
-    inputs[0].Idate = new Date().toLocaleDateString();
-    inputs[0].Inumber = 'GST-123456789';
-    inputs[0].productName = 'Bachelor of Building Construction'
-    inputs[0].quantityValue = '1.00'
-    inputs[0].unitPriceValue = '5000.00'
-    inputs[0].gstValue = '10%'
-    inputs[0].amountValue = '5000.00'
-    inputs[0].subtotalValue = '5000.00'
-    inputs[0].GSTValue = '500.00'
-    inputs[0].totalValue = '5500.00'
-    inputs[0].paymentType = 'Card : Visa'
-    inputs[0].Status = 'Status : Success'
 
+    inputs[0].clientName = pdfData.clientName
+    inputs[0].Idate = new Date().toLocaleDateString();
+    inputs[0].Inumber = pdfData.Inumber
+    inputs[0].productName = pdfData.productName
+    inputs[0].quantityValue = `${pdfData.quantityValue}`
+    inputs[0].unitPriceValue = `${pdfData.unitPriceValue}`
+    inputs[0].gstValue = '10%'
+    inputs[0].amountValue = `${pdfData.amountValue}`
+    inputs[0].subtotalValue = `${pdfData.subtotalValue}`
+    inputs[0].GSTValue = `${pdfData.GSTValue}`
+    inputs[0].totalValue = `${pdfData.totalValue}`
+    inputs[0].paymentType = pdfData.paymentType
+    inputs[0].Status = `Status : ${pdfData.Status}`
+
+    invoiceName = pdfData.Inumber
 
     const pdfsDir = path.join(__dirname, 'invoices');
     if (!fs.existsSync(pdfsDir)) {
@@ -571,9 +572,13 @@ const generateInvoice = async (req, res, next) => {
     }
 
     generate({ template, inputs, options: { font } }).then((pdf) => {
-        fs.writeFileSync(path.join(pdfsDir, `invoice2.pdf`), pdf);
+        fs.writeFileSync(path.join(pdfsDir, `${invoiceName}.pdf`), pdf);
     });
-    res.status(200).send('Invoice generated');
+
+    const generateInvoiceFilePath = path.join(__dirname, 'invoices', `${invoiceName}.pdf`);
+    if(fs.existsSync(generateInvoiceFilePath)){
+        return generateInvoiceFilePath;
+    }
 }
 
 module.exports = generateInvoice;

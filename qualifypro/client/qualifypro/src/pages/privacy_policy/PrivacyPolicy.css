@@ -1,8 +1,9 @@
-.privacy-policy-container{
-    padding-left: 8rem;
+.privacy-policy-container {
+  padding-left: 8rem;
   padding-right: 8rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  cursor: context-menu;
 }
 
 @media screen and (max-width: 1200px) {

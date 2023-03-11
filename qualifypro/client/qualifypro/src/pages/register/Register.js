@@ -155,7 +155,7 @@ const Register = () => {
         setState(initialState)
         setShowAlert(false)
     }
-    console.log(checked)
+    // console.log(checked)
 
     return (
         <Box className='regsiter-container'>
